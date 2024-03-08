@@ -1,0 +1,27 @@
+<div class="row align-items-center">
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <div class="card mt-5 shadow">
+      <div class="card-body">
+        <label class="mb-3 form-label" for="arabicNumber" id="lbl">
+          Write a number:
+        </label>
+        <input
+          class="form-control form-control-lg mb-5"
+          type="number"
+          id="arabicNumber"
+          name="arabicNumber"
+          placeholder="e.g: 23980"
+          [(ngModel)]="inputNumber"
+          max="9999999999"
+          min="-9999999999"
+        />
+
+        <ngx-tafqit
+          id="ngx-tafqit"
+          class="mb-3"
+          [number]="inputNumber"
+        ></ngx-tafqit>
+      </div>
+    </div>
+  </div>
+</div>
